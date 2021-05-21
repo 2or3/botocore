@@ -308,6 +308,7 @@ class Waiter(object):
         max_attempts = config.get('MaxAttempts', self.config.max_attempts)
         last_matched_acceptor = None
         num_attempts = 0
+        time.sleep(sleep_amount)
 
         while True:
             response = self._operation_method(**kwargs)
